@@ -1,0 +1,78 @@
+\chapter{Capítulo III}
+\label{cap:meto}
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+
+\begin{equation}
+h_{t} = \phi(b + Wh_{t-1} + Ux_{t})
+\label{eq:expand_vanilla_rnn}
+\end{equation}
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+
+\begin{equation}
+    o_{t} = c + Vh_{t}
+\label{eq:output_vanilla_rnn}
+\end{equation}
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+
+\begin{equation}
+E(y_{t},\hat{y_{t}}) & = \sum_{t} L_{t}(y_{t}, \hat{y}_{t})
+\label{eq:passo2}
+\end{equation}
+
+\begin{equation}
+= - \sum_{t} y_{t}\log \hat{y}_{t} 
+    \label{eq:cost_rnn}
+\end{equation}
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+
+\begin{equation}
+\frac{\partial E}{\partial W} = \sum^{T}_{t=1}\frac{\partial E_{t}}{\partial W}
+    \label{eq:totalerror}
+\end{equation}
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+
+\begin{equation}
+s_{t} = \phi(Ws_{t-1} + Ux_{t})
+\label{eq:mod_rec}
+\end{equation}
+
+\begin{equation}
+    \hat{y}_{t} = \textup{softmax}(Vs_{t})
+\label{eq:mod_softmax}
+\end{equation}
+
+\begin{equation}
+    \frac{\partial E_{t}}{\partial V} = \frac{\partial E_{t}}{\partial \hat{y}_{t}}\frac{\partial \hat{y}_{t}}{\partial V}
+\label{eq:mod_softmax}
+\end{equation}
+
+\begin{equation}
+\frac{\partial E_{t}}{\partial V} = \frac{\partial E_{3}}{\partial \hat{y}_{t}}\frac{\partial \hat{y}_{t}}{\partial z_{t}}\frac{\partial z_{t}}{\partial V}
+\label{eq:mod_softmax}
+\end{equation}
+
+\begin{equation}
+    \frac{\partial E_{t}}{\partial V} = (\hat{y}_{t} - y_{t}) \otimes s_{t}
+\label{eq:partial_v}
+\end{equation}
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+
+\begin{equation}
+\frac{\partial E_{t}}{\partial W} = \sum^{t}_{k=0}\frac{\partial E_{t}}{\partial \hat{y}_{t}}\frac{\partial \hat{y}_{t}}{\partial s_{t}}\frac{\partial s_{t}}{\partial s_{k}}\frac{\partial s_{k}}{\partial W}
+\label{eq:rule_chain}
+\end{equation}
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
+
+\begin{equation}
+\delta^{t}_{k} = \frac{\partial E_{t} }{\partial z_{k}} = \frac{\partial E_{t} }{\partial s_{k}}\frac{\partial s_{t} }{\partial s_{k}}\frac{\partial s_{k} }{\partial z_{k}}
+\label{eq:deltarnn}
+\end{equation}
+
